@@ -7,7 +7,7 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/xeyes-AppImage)](https://github.com/pkgforge-dev/xeyes-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://gitlab.freedesktop.org/uploads/-/system/project/avatar/503/eyes.png" width="128" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Xeyes.png" width="128" />
 </p>
 
 
