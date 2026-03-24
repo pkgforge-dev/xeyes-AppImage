@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Xeyes
+Comment="Follow the mouse/SHAPE extension X demo"
+Exec=xeyes
+Icon=Xeyes
+StartupWMClass=
+Terminal=false
+Type=Application
+Categories=Simulation;
