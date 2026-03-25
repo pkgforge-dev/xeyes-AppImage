@@ -9,7 +9,6 @@ export OUTPATH=./dist
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=https://upload.wikimedia.org/wikipedia/commons/2/2e/Xeyes.png
 export ALWAYS_SOFTWARE=1
-export DEPLOY_CLI_TOOL=1
 
 # Deploy dependencies
 quick-sharun /usr/bin/xeyes
