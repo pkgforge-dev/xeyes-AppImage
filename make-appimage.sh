@@ -3,22 +3,18 @@
 set -eu
 
 ARCH=$(uname -m)
-VERSION=$(pacman -Q xorg-xeyes | awk '{print $2; exit}') # example command to get version of application here
+VERSION=$(pacman -Q xorg-xeyes | awk '{print $2; exit}')
 export ARCH VERSION
 export OUTPATH=./dist
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=https://upload.wikimedia.org/wikipedia/commons/2/2e/Xeyes.png
-export ALWAYS_SOFTWARE=1
-export DEPLOY_CLI_TOOL=1
+export USE_HOST_DRIVERS_EXPERIMENTAL=1
 
 # Deploy dependencies
 quick-sharun /usr/bin/xeyes
 
-# Additional changes can be done in between here
-
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
 
-# Test the app for 12 seconds, if the test fails due to the app
-# having issues running in the CI use --simple-test instead
-quick-sharun --test ./dist/*.AppImage
+# Test the app for 12 seconds, if the app normally quits before that time
+# then skip this or check if some flag can be passed that makes it stay open
+quick-sharun --simple-test ./dist/*.AppImage
