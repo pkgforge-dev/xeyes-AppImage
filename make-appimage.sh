@@ -7,7 +7,6 @@ VERSION=$(pacman -Q xorg-xeyes | awk '{print $2; exit}') # example command to ge
 export ARCH VERSION
 export OUTPATH=./dist
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=https://upload.wikimedia.org/wikipedia/commons/2/2e/Xeyes.png
 export ALWAYS_SOFTWARE=1
 
 # Deploy dependencies
